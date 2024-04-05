@@ -1,0 +1,53 @@
+.background-banner-image{
+    background-image: url('../../assets/homePageBanner.png');
+    background-size: cover;
+    background-position: center;
+    height: 75vh;
+    width: 100%;
+}
+
+.progress-bar{
+    background-color: #A0FFE2 !important;
+}
+
+.horizantal_line {
+    border: 1px solid white !important;
+    margin: 0px 30px !important;
+}
+
+.background-care-image{
+    background-image: url('../../assets/careAboout.png');
+    background-size: cover;
+    background-position: center;
+    height: 600PX;
+    width: 100%;
+}
+
+.requestForm{
+    border: 1px solid transparent;
+    border-radius: 30px;
+    padding: 25px;
+    margin-top: 100px;
+    /* opacity: 20%; */
+    background-color: #D9D9D9;
+    box-shadow: 2px 2px 2px 2px gray;
+}
+
+.requestFormInput{
+    border: 1px solid transparent;
+    border-radius: 50px;
+    margin-top: 20px;
+    background-color: #fff !important;
+    height: 50px;
+    margin-bottom: 20px;
+    /* opacity: 100% !important; */
+}
+
+.navLink {
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #002140;
+    padding-top: 10px;
+}
