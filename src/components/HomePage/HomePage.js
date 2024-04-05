@@ -1,4 +1,7 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
 import "./HomePage.css";
 import cardPhoto from "../../assets/cardPhoto.png";
 import sayingAbout from "../../assets/sayingAbout.png";
@@ -9,7 +12,10 @@ import instagram from "../../assets/instagram.png";
 import telegram from "../../assets/telegram.png";
 import navbarLogo from "../../assets/navbarLogo.png";
 import donateButton from "../../assets/donateButton.png";
+import programDetailsButton from "../../assets/programDetailsButton.png";
+import search from "../../assets/search.png"
 import string from "../../assets/string.png";
+import sayingAboutbg from "../../assets/sayingAboutbg.png"
 import { Link } from "react-router-dom";
 
 function HomePage() {
@@ -54,6 +60,22 @@ function HomePage() {
           <button type="submit" style={{ width: "22%", color: "#fff", backgroundColor: "#56D1A7", fontSize: "20px", fontFamily: "Lato", fontWeight: "500", marginTop: "15px", borderRadius: "35px" }} class="btn">Start a fundraise</button>
         </div>
       </div>
+      {/* search catagory  */}
+      <div className='container-fluid text-center' >
+        <h1 className='mt-5 mb-5' style={{ fontFamily: 'Trebuchet MS', fontSize: '40px', fontWeight: 400, lineHeight: '33px', textAlign: 'center' }}>Together, We Can Create Change - <span style={{ fontFamily: 'Trebuchet MS', fontSize: '40px', fontWeight: 700, lineHeight: '33px', textAlign: 'center', color: '#56D1A7' }}>Let's Begin Today.</span></h1>
+        <InputGroup className="mb-3">
+        <Form.Control
+          placeholder="Recipient's username"
+          aria-label="Recipient's username"
+          aria-describedby="basic-addon2"
+        />
+        <Button variant="outline-secondary" id="button-addon2" style={{ padding: '0', margin: '0' }}>
+          <img src={search} alt="Search" style={{ width: '100%', height: '100%' }} />
+        </Button>
+      </InputGroup>
+      </div>
+
+
       <div className='container-fluid'>
         <div style={{ display: "flex", justifyContent: "space-between", margin: "25px 110px" }}>
           <h1 style={{ fontSize: "28px", lineHeight: "28px", fontFamily: "Lato", fontWeight: "400", color: "#002140" }}>Donate To Medical Fundraising Around The World </h1>
@@ -61,28 +83,35 @@ function HomePage() {
         </div>
         <div className='row justify-content-center'>
           <div className='col-lg-3 col-sm-12'>
-            <div className="card shadow" style={{ width: "23rem" }}>
+            <div className="shadow card" style={{ width: "23rem" }}>
               <img className="card-img-top p-3" src={cardPhoto} alt="Card image cap" />
               <div className="card-body">
-                <h5 className="card-title text-center">Help Ravi Beat Leukemia</h5>
+                <h4 className="card-title text-center">Help Ravi Beat Leukemia</h4>
                 <div className='' style={{ display: "flex", justifyContent: "space-around" }}>
                   <div>
-                    <p className='text-center'>Raised</p>
-                    <p className='text-center'>Rs. 70,000</p>
+                    <p className='text-center' style={{ fontWeight: 10 }}>Raised</p>
+                    <p className='text-center' style={{ fontWeight: 10 }}>Rs. 70,000</p>
                   </div>
                   <div>
-                    <p className='text-center'>Remaining</p>
-                    <p className='text-center'>Rs. 1,00,000</p>
+                    <p className='text-center' style={{ fontWeight: 10 }}>Remaining</p>
+                    <p className='text-center' style={{ fontWeight: 10 }}>Rs. 1,00,000</p>
                   </div>
                   <div>
-                    <p className='text-center'>Expire Date</p>
-                    <p className='text-center'>23 Jun, 2023</p>
+                    <p className='text-center' style={{ fontWeight: 10 }}>Expire Date</p>
+                    <p className='text-center' style={{ fontWeight: 10 }}>23 Jun, 2023</p>
                   </div>
                 </div>
-                <div className="progress">
-                  <div className="progress-bar" role="progressbar" style={{ width: "25%" }} aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                <div className="progress rounded-pill">
+                  <div className="progress-bar rounded-pill" role="progressbar" style={{ width: "70%", background: "linear-gradient(#56D1A7, #A0FFE2)" }} aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
-                <a href="#" className="btn btn-primary">Go somewhere</a>
+                <div className='row mt-3'>
+                  <div className='col'>
+                    <Link to="#"><img src={donateButton} alt="Description of the image" style={{ height: "35px" }} /></Link>
+                  </div>
+                  <div className="col justify-content-end">
+                    <Link to="#"><img src={programDetailsButton} alt="Description of the image" style={{ height: "35px" }} /></Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -108,7 +137,7 @@ function HomePage() {
           </div>
         </div>
       </div>
-      <div style={{marginTop:"90px"}}>
+      <div style={{marginTop:"90px", backgroundImage: `url(${sayingAboutbg})`}}>
         <p className='text-center' style={{fontWeight:"300", fontSize:"40px", lineHeight:"33px", color:"#002140"}}>What people are saying about <span style={{color:"#56D1A7"}}>Givehands</span> </p>
         <img className="text-white" src={sayingAbout} alt="Description of the image" style={{ height: "430px", width: "100%" }} />
       </div>
