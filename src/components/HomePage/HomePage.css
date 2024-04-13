@@ -6,6 +6,23 @@
     width: 100%;
 }
 
+.background-mobile-banner-image{
+    background-image: url('../../assets/mobileBanner.png');
+    background-size: cover;
+    background-position: center;
+    height: 75vh;
+    width: 100%;
+}
+
+.desktop_view{
+    display: block;
+}
+
+.mobile_view{
+    display: none;
+    overflow: hidden;
+}
+
 .progress-bar{
     background-color: #A0FFE2 !important;
 }
@@ -51,3 +68,12 @@
     color: #002140;
     padding-top: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+    .desktop_view{
+        display: none;
+    }
+    .mobile_view{
+        display: block;
+    }
+  }
